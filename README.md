@@ -54,27 +54,27 @@ pip install -r requirements.txt
 ## LogAnalyzer offers both a graphical user interface (GUI) and a command-line interface (CLI) for flexibility.
 
 # Start the GUI application:
-python log_analyzer.py # Assuming log_analyzer.py is your main GUI script
+python loganalyzer.py # Assuming loganalyzer.py is your main GUI script
 
 # Click on "Select Log File and Scan" to choose a log file.
 
 **The analysis results will be displayed, and a report/graph will be saved in the same directory as the log file.**
 
 # Run a log analysis via CLI:
-python log_analyzer_cli.py analyze /path/to/logfile.log
+python loganalyzer.py analyze /path/to/logfile.log
 
 # Audit an SSH configuration file via CLI:
-python log_analyzer_cli.py audit /etc/ssh/sshd_config ssh
+python loganalyzer.py audit /etc/ssh/sshd_config ssh
 
 *(The audit command currently supports ssh configurations. More types may be added in future enhancements.)*
 
 # Manage custom detection patterns:
-python log_analyzer_cli.py edit-patterns
+python loganalyzer.py edit-patterns
 
 *(This command will open the custom patterns JSON file in your default editor, allowing you to add your own regex patterns and remedies.)*
 
 # Update LogAnalyzer to the latest version:
-python log_analyzer_cli.py update
+python loganalyzer.py update
 
 *(This command pulls the latest changes from the Git repository, ensuring you have the most recent features and bug fixes.)*
 
