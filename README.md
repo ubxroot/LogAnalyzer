@@ -54,49 +54,29 @@ pip install -r requirements.txt
 ## LogAnalyzer offers both a graphical user interface (GUI) and a command-line interface (CLI) for flexibility.
 
 # Start the GUI application:
-**python log_analyzer.py # Assuming log_analyzer.py is your main GUI script**
+python log_analyzer.py # Assuming log_analyzer.py is your main GUI script
 
 # Click on "Select Log File and Scan" to choose a log file.
 
 **The analysis results will be displayed, and a report/graph will be saved in the same directory as the log file.**
 
 # Run a log analysis via CLI:
-**python log_analyzer_cli.py analyze /path/to/logfile.log**
+python log_analyzer_cli.py analyze /path/to/logfile.log
 
 # Audit an SSH configuration file via CLI:
-**python log_analyzer_cli.py audit /etc/ssh/sshd_config ssh**
+python log_analyzer_cli.py audit /etc/ssh/sshd_config ssh
 
 *(The audit command currently supports ssh configurations. More types may be added in future enhancements.)*
 
 # Manage custom detection patterns:
-**python log_analyzer_cli.py edit-patterns**
+python log_analyzer_cli.py edit-patterns
 
 *(This command will open the custom patterns JSON file in your default editor, allowing you to add your own regex patterns and remedies.)*
 
 # Update LogAnalyzer to the latest version:
-**python log_analyzer_cli.py update**
+python log_analyzer_cli.py update
 
 *(This command pulls the latest changes from the Git repository, ensuring you have the most recent features and bug fixes.)*
-
-# 📊 Example Output (Table Format)
-# LogAnalyzer provides clear, structured output like this in the command line:
-
-**Log Analysis Results for access.log**
-┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃ Event Type            ┃ Occurrences ┃ Recommended Remedy                                                  ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
-│ SQL Injection         │         150 │ Review web application logs, sanitize input, update web application │
-│                       │             │ firewall (WAF) rules, patch vulnerable applications.                │
-├───────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────┤
-│ Unauthorized Access   │          45 │ Block source IP, reset affected user passwords, enforce MFA,        │
-│                       │             │ review access logs for similar activity.                            │
-├───────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────┤
-│ SSH Bruteforce        │          12 │ Block the source IP address in firewall, consider fail2ban.         │
-│                       │             │ Review user accounts for compromise.                                │
-├───────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────┤
-│ Port Scan             │           3 │ Investigate the scanning source. Block if malicious. Review         │
-│                       │             │ exposed services and firewall rules.                                │
-└───────────────────────┴─────────────┴─────────────────────────────────────────────────────────────────────┘
 
 # Development & Contributions
 LogAnalyzer is actively developed, and contributions are highly encouraged! Feel free to open issues for bug reports or feature requests, or submit pull requests with improvements and new functionalities. Your input helps make LogAnalyzer an even more valuable tool for the blue team community.
