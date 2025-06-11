@@ -1,6 +1,6 @@
-echo "typer
+typer
 rich
 pyfiglet
 matplotlib
 numpy
-Pillow" > requirements.txt
+Pillow
