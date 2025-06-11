@@ -1,0 +1,6 @@
+echo "typer
+rich
+pyfiglet
+matplotlib
+numpy
+Pillow" > requirements.txt
